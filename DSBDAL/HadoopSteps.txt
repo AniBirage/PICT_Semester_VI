@@ -1,0 +1,31 @@
+Steps for Hadoop:
+Create a Folder(Main_Folder)
+Inside the Main_Folder 
+-Create Two Folders namely Input(TextFile.txt) and Classes
+-Program.java
+
+hadoop version
+
+javac -version
+
+1.start-all.sh
+
+2.export HADOOP_CLASSPATH=$(hadoop classpath)
+
+3.echo $HADOOP_CLASSPATH
+
+4.hadoop fs -mkdir /Assignment_Name
+
+5.hadoop fs -mkdir /Assignment_Name/Input
+
+6.hadoop fs -put (drag the TextFile.txt) /Assignment_Name/Input
+
+7.cd (path of the Main_Folder)
+
+8.javac -classpath ${HADOOP_CLASSPATH} -d (drag the Classes folder) (drag the Program.java file)
+
+9.jar -cvf Name_of_Jar_File.jar -C Classes/ .
+
+10.hadoop jar (drag the Name_of_Jar_File.jar file) Program /Assignment_Name/Input /Assignment_Name/Output
+
+11.hadoop dfs -cat /Assignment_Name/Output/*
