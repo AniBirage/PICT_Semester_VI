@@ -1,0 +1,51 @@
+public class CurrencyConverter {
+    public Double inr {get; set;}
+    public Double usd {get; set;}
+    public Double eur {get; set;}
+    public Double gbp {get; set;}
+    public Double jpy {get; set;}
+    
+    public pagereference Rupee() {
+        usd = 0.012 * inr;
+        eur = 0.0111 * inr;
+        gbp = 0.0096 * inr;
+        jpy = 1.8349 * inr;
+        return null;
+    }
+    public pagereference Dollar() {
+        inr = 83.381 * usd;
+        eur = 0.9294 * usd;
+        gbp = 0.7971 * usd;
+        jpy = 153 * usd;
+        return null;
+    }
+    public pagereference Euro() {
+        inr = 89.7263 * eur;
+        usd = 1.076 * eur;
+        gbp = 0.8576 * eur;
+        jpy = 164.63 * eur;
+        return null;
+    }
+    public pagereference Pound() {
+        inr = 104.614 * gbp;
+        usd = 1.2547 * gbp;
+        eur = 1.1661 * gbp;
+        jpy = 191.96 * gbp;
+        return null;
+    }
+    public pagereference Yen() {
+        inr = 0.545 * jpy;
+        usd = 0.0065 * jpy;
+        eur = 0.0061 * jpy;
+        gbp = 0.0052 * jpy;
+        return null;
+    }
+    public pagereference clear(){
+        inr = null;
+        usd = null;
+        eur = null;
+        gbp = null;
+        jpy = null;
+        return null;
+    }
+}

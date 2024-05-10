@@ -1,0 +1,28 @@
+public class Calculator {
+    public Double X {get; set;}
+    public Double Y {get; set;}
+    public Double Result {get; set;}
+    
+    public pagereference Add(){
+        Result = X + Y;
+        return null;
+    }
+    public pagereference Subtract(){
+        Result = X - Y;
+        return null;
+    }
+    public pagereference Multiply(){
+        Result = X * Y;
+        return null;
+    }
+    public pagereference Divide(){
+        Result = X / Y;
+        return null;
+    }
+    public pagereference Clear(){
+        X = null;
+        Y = null;
+        Result = null;
+        return null;
+    }
+}

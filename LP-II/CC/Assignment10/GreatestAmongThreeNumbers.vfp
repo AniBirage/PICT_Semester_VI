@@ -1,0 +1,27 @@
+<apex:page controller="GreatestAmongThreeNumbers" sidebar="false" >
+    <apex:form >
+       <apex:pageBlock title="Assignment10">
+            <apex:pageBlockSection columns="1" title="Greatest Among Three Numbers" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Enter X Value</apex:outputLabel>
+                    <apex:inputText value="{!x}"/>                
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Enter Y Value</apex:outputLabel>
+                    <apex:inputText value="{!y}"/>    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Enter Z Value</apex:outputLabel>
+                    <apex:inputText value="{!z}"/>                
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >The Largest Among the Three Numbers Is</apex:outputLabel>
+                    <apex:inputText value="{!result}"/>    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:commandButton value="Calculate" action="{!Largest}"/> 
+            	</apex:pageBlockSectionItem>
+            </apex:pageBlockSection>                 
+       </apex:pageBlock>
+    </apex:form>   
+</apex:page>

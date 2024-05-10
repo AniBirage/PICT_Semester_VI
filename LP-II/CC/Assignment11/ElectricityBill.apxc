@@ -1,0 +1,16 @@
+public class ElectricityBill {
+    public Double unit {get; set;}
+    public Double rate {get; set;}
+    public Double bill {get; set;}
+    
+    public pagereference Calculate() {
+        bill = unit * rate;
+        return null;
+    }
+    public pageReference clear() {
+        unit = null;
+        rate = null;
+        bill = null;
+        return null;
+    }
+}

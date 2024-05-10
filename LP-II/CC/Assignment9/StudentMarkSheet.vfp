@@ -1,0 +1,60 @@
+<apex:page controller="StudentMarkSheet" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="Assignment9">
+            <apex:pageBlockSection columns="2" title="Enter Marks" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >English</apex:outputLabel>
+                    <apex:inputText value="{!Eng_Marks}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Mathematics</apex:outputLabel>
+                    <apex:inputText value="{!Math_Marks}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Science</apex:outputLabel>
+                    <apex:inputText value="{!Sci_Marks}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Social Studies</apex:outputLabel>
+                    <apex:inputText value="{!SST_Marks}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Computer Science</apex:outputLabel>
+                    <apex:inputText value="{!CompSci_Marks}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="Student MarkSheet" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >English</apex:outputLabel>
+                    <apex:inputText value="{!Eng_G}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Mathematics</apex:outputLabel>
+                    <apex:inputText value="{!Math_G}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Science</apex:outputLabel>
+                    <apex:inputText value="{!Sci_G}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Social Studies</apex:outputLabel>
+                    <apex:inputText value="{!SST_G}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Computer Science</apex:outputLabel>
+                    <apex:inputText value="{!CompSci_G}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >SGPA</apex:outputLabel>
+                    <apex:inputText value="{!SGPA}"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Calculate" action="{!Calculate}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Clear" action="{!Clear}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

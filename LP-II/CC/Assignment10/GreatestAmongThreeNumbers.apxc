@@ -1,0 +1,19 @@
+public class GreatestAmongThreeNumbers {
+    public Double x {get; set;}
+    public Double y {get; set;}
+    public Double z {get; set;}
+    public Double result {get;set;}
+    
+    public pagereference Largest() {
+        if( (x > y) && (x > z) ) {
+            result = x;
+        }
+        else if( (y > x) && (y > z) ) {
+            result = y;
+        }
+        else {
+            result = z;
+        }
+        return null;
+    }
+}

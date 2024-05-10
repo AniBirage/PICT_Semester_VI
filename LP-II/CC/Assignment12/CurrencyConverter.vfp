@@ -1,0 +1,48 @@
+<apex:page controller="CurrencyConverter" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="Assignment12">
+            <apex:pageBlockSection columns="1" title="Currency Converter" collapsible="false">
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel >INR</apex:outputLabel>
+                	<apex:inputText value="{!inr}"/>                
+            	</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel >USD</apex:outputLabel>
+                	<apex:inputText value="{!usd}"/>                
+            	</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel >EUR</apex:outputLabel>
+                	<apex:inputText value="{!eur}"/>                
+            	</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel >GBP</apex:outputLabel>
+                	<apex:inputText value="{!gbp}"/>                
+            	</apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel >JPY</apex:outputLabel>
+                	<apex:inputText value="{!jpy}"/>                
+            	</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+            <apex:pageBlockSection columns="3" title="Conversion Options" collapsible="false">
+            <apex:pageBlockSectionItem >
+                <apex:commandButton value="Calculate According to INR" action="{!Rupee}"/> 
+            </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:commandButton value="Calculate According to USD" action="{!Dollar}"/> 
+            </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:commandButton value="Calculate According to EUR" action="{!Euro}"/> 
+            </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:commandButton value="Calculate According to GBP" action="{!Pound}"/> 
+            </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:commandButton value="Calculate According to JPY" action="{!Yen}"/> 
+            </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                <apex:commandButton value="Clear" action="{!clear}"/> 
+            </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

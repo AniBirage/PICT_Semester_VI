@@ -1,0 +1,37 @@
+<apex:page controller="Calculator" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="Assignment9">
+            <apex:pageBlockSection columns="1" title="Enter Values" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Enter X Value</apex:outputLabel>
+                    <apex:inputText value="{!X}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Enter Y Value</apex:outputLabel>
+                    <apex:inputText value="{!Y}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Result</apex:outputLabel>
+                    <apex:inputText value="{!Result}"/>
+                </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+           <apex:pageBlockSection columns="2" title="Mathematical Operations" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Addition" action="{!Add}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Subtraction" action="{!Subtract}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Multiplication" action="{!Multiply}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Division" action="{!Divide}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:commandButton value="Clear" action="{!Clear}"/>
+                </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

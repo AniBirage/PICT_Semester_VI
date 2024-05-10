@@ -1,0 +1,58 @@
+public class StudentMarkSheet {
+    public Integer Eng_Marks {get; set;}
+    public Integer Math_Marks {get; set;}
+    public Integer Sci_Marks {get; set;}
+    public Integer SST_Marks {get; set;}
+    public Integer CompSci_Marks {get; set;}
+    public String Eng_G {get; set;}
+    public String Math_G {get; set;}
+    public String Sci_G {get; set;}
+    public String SST_G {get; set;}
+    public String CompSci_G {get; set;}
+    public Double SGPA {get; set;}
+    
+    public String GetGrade(Integer marks) {
+        if (marks >= 90) {
+            return 'O';
+        }else if (marks >= 80) {
+            return 'A';
+        }else if (marks >= 70) {
+            return 'B';
+        }else if (marks >= 60) {
+            return 'C';
+        }else if (marks >= 50) {
+            return 'D';
+        }else {
+            return 'F';
+        }
+    }
+    
+    public void Calculate() {
+        Eng_G = GetGrade (Eng_Marks);
+        Math_G = GetGrade (Math_Marks);
+        Sci_G = GetGrade (Sci_Marks);
+        SST_G = GetGrade (SST_Marks);
+        CompSci_G = GetGrade (CompSci_Marks);
+        
+        if (Eng_G =='F'||Math_G=='F'||Sci_G=='F'||SST_G=='F'||CompSci_G=='F') {
+            SGPA = 0.0;
+        }else {
+            SGPA = (Eng_Marks + Math_Marks + Sci_Marks + SST_Marks + CompSci_Marks) / 50;
+        }
+    }
+    
+    public pagereference Clear() {
+        Eng_Marks = null;
+        Math_Marks = null;
+        Sci_Marks = null;
+        SST_Marks = null;
+        CompSci_Marks = null;
+        Eng_G = null;
+        Math_G = null;
+        Sci_G = null;
+        SST_G = null;
+        CompSci_G = null;
+        SGPA = null;
+        return null;
+    }
+}

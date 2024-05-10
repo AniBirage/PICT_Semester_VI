@@ -1,0 +1,19 @@
+<apex:page controller="CelsiusToFahrenheit" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="Assignment11">
+            <apex:pageBlockSection columns="1" title="Celsius To Fahrenheit" collapsible="false">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Celsius</apex:outputLabel>
+                    <apex:inputText value="{!celsius}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Fahrenheit</apex:outputLabel>
+                    <apex:inputText value="{!fahrenheit}"/>
+                </apex:pageBlockSectionItem>
+                    <apex:pageBlockSectionItem >
+                        <apex:commandButton value="Calculate" action="{!Temperature}"/>
+                    </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
